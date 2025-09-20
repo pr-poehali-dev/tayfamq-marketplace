@@ -31,71 +31,7 @@ const categories = [
   { id: 'food', name: 'Продукты', icon: 'Apple' }
 ]
 
-const products: Product[] = [
-  {
-    id: 1,
-    name: 'Смартфон Samsung Galaxy S24',
-    price: 89990,
-    originalPrice: 99990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'electronics',
-    rating: 4.8,
-    reviews: 234,
-    inStock: true
-  },
-  {
-    id: 2,
-    name: 'Кофемашина Nespresso',
-    price: 24990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'home',
-    rating: 4.6,
-    reviews: 156,
-    inStock: true
-  },
-  {
-    id: 3,
-    name: 'Кроссовки Nike Air Max',
-    price: 12990,
-    originalPrice: 15990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'sport',
-    rating: 4.7,
-    reviews: 89,
-    inStock: true
-  },
-  {
-    id: 4,
-    name: 'Набор косметики L\'Oreal',
-    price: 5990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'beauty',
-    rating: 4.5,
-    reviews: 201,
-    inStock: false
-  },
-  {
-    id: 5,
-    name: 'Пылесос Dyson V15',
-    price: 45990,
-    originalPrice: 49990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'home',
-    rating: 4.9,
-    reviews: 67,
-    inStock: true
-  },
-  {
-    id: 6,
-    name: 'Рубашка Calvin Klein',
-    price: 7990,
-    image: 'https://v3b.fal.media/files/b/zebra/ZeSPZkHKRknJsHUu9ISa__output.png',
-    category: 'clothes',
-    rating: 4.4,
-    reviews: 43,
-    inStock: true
-  }
-]
+const products: Product[] = []
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
