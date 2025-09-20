@@ -25,7 +25,28 @@ const categories = [
   { id: 'all', name: 'Все товары', icon: 'Grid3X3' }
 ]
 
-const products: Product[] = []
+const products: Product[] = [
+  {
+    id: 1,
+    name: 'Вкусняшка',
+    price: 450,
+    image: '/img/7f1da279-71fb-4e8c-a474-9713bfba154e.jpg',
+    category: 'all',
+    rating: 5.0,
+    reviews: 12,
+    inStock: true
+  },
+  {
+    id: 2,
+    name: 'Тарелочка',
+    price: 890,
+    image: '/img/7a9d32dc-c876-49a2-82a4-b1abaa764c2b.jpg',
+    category: 'all',
+    rating: 4.8,
+    reviews: 7,
+    inStock: true
+  }
+]
 
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -85,7 +106,7 @@ const Index = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-4">
               <h1 className="text-2xl font-bold text-gray-900">TAYFAMQ</h1>
-              <Badge variant="secondary" className="bg-brand-orange text-white">
+              <Badge variant="secondary" className="bg-primary text-primary-foreground">
                 Семейный маркетплейс
               </Badge>
             </div>
@@ -111,7 +132,7 @@ const Index = () => {
               >
                 <Icon name="ShoppingCart" size={20} />
                 {getTotalItems() > 0 && (
-                  <Badge className="absolute -top-2 -right-2 bg-brand-orange text-white min-w-[20px] h-5 rounded-full flex items-center justify-center text-xs">
+                  <Badge className="absolute -top-2 -right-2 bg-primary text-primary-foreground min-w-[20px] h-5 rounded-full flex items-center justify-center text-xs">
                     {getTotalItems()}
                   </Badge>
                 )}
@@ -140,7 +161,7 @@ const Index = () => {
                       onClick={() => setSelectedCategory(category.id)}
                       className={`w-full flex items-center space-x-3 px-4 py-3 text-left hover:bg-gray-50 transition-colors ${
                         selectedCategory === category.id
-                          ? 'bg-brand-orange text-white hover:bg-brand-orange/90'
+                          ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                           : 'text-gray-700'
                       }`}
                     >
@@ -222,7 +243,7 @@ const Index = () => {
                             {getTotalPrice().toLocaleString()} ₽
                           </span>
                         </div>
-                        <Button className="w-full bg-brand-orange hover:bg-brand-orange/90">
+                        <Button className="w-full bg-primary hover:bg-primary/90">
                           Оформить заказ
                         </Button>
                       </div>
@@ -236,7 +257,7 @@ const Index = () => {
           {/* Main content */}
           <main className="flex-1">
             {/* Hero section */}
-            <div className="bg-gradient-to-r from-brand-orange to-brand-purple rounded-lg p-8 mb-8 text-white">
+            <div className="bg-gradient-to-r from-primary to-purple-400 rounded-lg p-8 mb-8 text-white">
               <h2 className="text-3xl font-bold mb-4">
                 Добро пожаловать в TAYFAMQ! 🇹🇭
               </h2>
@@ -246,7 +267,7 @@ const Index = () => {
               <Button 
                 variant="secondary" 
                 size="lg"
-                className="bg-white text-brand-orange hover:bg-gray-100"
+                className="bg-white text-primary hover:bg-gray-100"
               >
                 Смотреть новинки
               </Button>
@@ -321,7 +342,7 @@ const Index = () => {
                       <Button
                         onClick={() => addToCart(product)}
                         disabled={!product.inStock}
-                        className="w-full bg-brand-orange hover:bg-brand-orange/90 disabled:opacity-50"
+                        className="w-full bg-primary hover:bg-primary/90 disabled:opacity-50"
                       >
                         <Icon name="ShoppingCart" size={16} className="mr-2" />
                         {product.inStock ? 'В корзину' : 'Нет в наличии'}
