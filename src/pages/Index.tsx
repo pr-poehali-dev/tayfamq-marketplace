@@ -22,13 +22,7 @@ interface CartItem extends Product {
 }
 
 const categories = [
-  { id: 'all', name: 'Все товары', icon: 'Grid3X3' },
-  { id: 'electronics', name: 'Электроника', icon: 'Smartphone' },
-  { id: 'home', name: 'Дом и быт', icon: 'Home' },
-  { id: 'beauty', name: 'Красота', icon: 'Sparkles' },
-  { id: 'clothes', name: 'Одежда', icon: 'Shirt' },
-  { id: 'sport', name: 'Спорт', icon: 'Dumbbell' },
-  { id: 'food', name: 'Продукты', icon: 'Apple' }
+  { id: 'all', name: 'Все товары', icon: 'Grid3X3' }
 ]
 
 const products: Product[] = []
