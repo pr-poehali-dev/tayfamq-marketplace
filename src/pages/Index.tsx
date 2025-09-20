@@ -45,6 +45,26 @@ const products: Product[] = [
     rating: 4.8,
     reviews: 7,
     inStock: true
+  },
+  {
+    id: 3,
+    name: 'Desert Eagle',
+    price: 125000,
+    image: '/img/a02511b5-d31c-4c71-a406-ee46db96d960.jpg',
+    category: 'all',
+    rating: 4.9,
+    reviews: 3,
+    inStock: true
+  },
+  {
+    id: 4,
+    name: 'Рюкзак Louis Vuitton',
+    price: 89990,
+    image: '/img/5d5d0c4c-337b-4566-a96c-f203e5dbe94e.jpg',
+    category: 'all',
+    rating: 4.7,
+    reviews: 15,
+    inStock: true
   }
 ]
 
